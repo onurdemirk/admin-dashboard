@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sidebar-bg-color: #0284c7;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(font/roboto.ttf);
+}
+
+.main {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar projects announcements"
+    "sidebar projects trending";
+}
+
+.sidebar {
+  display: grid;
+  background-color: var(--sidebar-bg-color);
+  grid-area: sidebar;
+  grid-template-rows: 1fr 2fr 3fr;
+}
+
+.sidebar .logo {
+  display: grid;
+  grid-template-rows: 40px;
+  grid-template-columns: 50px 70px;
+  align-items: center;
+  padding: 25px 0 0 20px;
+  margin: 0;
+  height: 35px;
+  font-family: roboto;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.logo img {
+  width: 35px;
+  height: auto;
+}
+
+.sidebar .nav {
+  display: grid;
+  grid-template-rows: repeat(6, 30px);
+  grid-template-columns: 50px 1fr;
+  padding-left: 10px;
+  align-items: center;
+  justify-items: center;
+  font-family: roboto;
+  font-size: 0.8rem;
+}
+
+.nav img {
+  width: 19px;
+  height: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  justify-self: start;
+}
+
+.sidebar .nav-bottom {
+  display: grid;
+  grid-template-rows: repeat(3, 30px);
+  grid-template-columns: 50px 1fr;
+  padding: 10px 0 0 10px;
+  align-items: center;
+  justify-items: center;
+  font-family: roboto;
+  font-size: 0.8rem;
+}
+
+.nav-bottom img {
+  width: 19px;
+  height: auto;
+}
+
+.nav-bottom a {
+  text-decoration: none;
+  color: white;
+  justify-self: start;
+}
+
+.header {
+  grid-area: header;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
