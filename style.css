@@ -6,6 +6,7 @@
 :root {
   --sidebar-bg-color: #0284c7;
   --searchbar: #cbd5e1;
+  --projects-bg: #e2e8f0;
 }
 
 html,
@@ -22,7 +23,7 @@ body {
 .main {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-columns: 1.2fr 4fr 2fr;
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas:
     "sidebar header header"
@@ -205,8 +206,53 @@ body {
 
 .projects {
   grid-area: projects;
+  padding: 30px 0 0 50px;
+  font-family: roboto;
+  background-color: var(--projects-bg);
+  margin-top: 20px;
 }
 
+.projects .project-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding-top: 7px;
+}
+
+.projects .boxes {
+  display: grid;
+  grid-template-rows: 20px 50px 20px;
+  border-radius: 7px;
+  border-left: 5px solid #f0b329;
+  box-shadow: 3px 4px 5px #d7dde3;
+  width: 270px;
+  height: 80px;
+  font-size: 0.7rem;
+  color: grey;
+  padding: 12px 15px 20px 15px;
+  background-color: white;
+}
+
+.projects .project-title {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: black;
+}
+
+.projects .social-icons {
+  display: grid;
+  grid-template-columns: 20px 20px 20px;
+  gap: 15px;
+  align-items: center;
+  justify-self: right;
+}
+
+.projects .message {
+  padding-right: 35px;
+}
+.social-icons img {
+  width: 17px;
+}
 .announcements {
   grid-area: announcements;
 }
