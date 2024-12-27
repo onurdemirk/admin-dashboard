@@ -226,7 +226,7 @@ body {
   border-left: 5px solid #f0b329;
   box-shadow: 3px 4px 5px #d7dde3;
   width: 270px;
-  height: 80px;
+  height: 94px;
   font-size: 0.7rem;
   color: grey;
   padding: 12px 15px 20px 15px;
@@ -289,4 +289,33 @@ font-weight: bold;
 
 .trending {
   grid-area: trending;
+  display: grid;
+  grid-template-rows: 20px 170px;
+  padding: 20px 0 0 30px;
+  font-family: roboto;
+  background-color: var(--projects-bg);
+  font-size: 0.6rem;
+  color: grey;
+  
+}
+
+.trending .trending-boxes {
+  display: grid;
+  grid-template-columns: 40px 70px;
+  gap: 2px;
+  border-radius: 7px;
+  box-shadow: 3px 4px 5px #d7dde3;
+  background-color: white;
+  width: 175px;
+  padding: 7px 20px 1px 20px;
+  align-items: center;
+}
+
+.trending-boxes img {
+  width: 30px;
+}
+
+.trending-boxes .hashtag {
+  font-weight: bold;
+  color: black;
 }
